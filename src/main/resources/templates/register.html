@@ -35,6 +35,12 @@
                 <div class="card-header">
                     <h2 class="text-center">Registration</h2>
                 </div>
+
+                <!-- Display User Registration Success Message -->
+                 <div th:if="${param.success}">
+                    <div class="alert alert-success">You Have Successfully Registered !</div>
+                 </div>
+
                 <div class="card-body">
                     <form method="post" role="form" th:action="@{/register/save}" th:object="${user}">
                         <!-- "th:field" Attribute Points to Model Object Fields -->
