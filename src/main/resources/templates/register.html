@@ -48,21 +48,45 @@
                             <label class="form-label">First Name</label>
                             <input class="form-control" id="firstName" name="firstName"
                                 placeholder="Enter You First Name Here" th:field="*{firstName}" type="text" />
+                            <!-- Display Validation Error Message -->
+                            <p
+                                    th:errors="*{firstName}"
+                                    class="text-danger"
+                                    th:if="${#fields.hasErrors('firstName')}"
+                            ></p>
                         </div>
                         <div class="form-group mb-3">
                             <label class="form-label">Last Name</label>
                             <input class="form-control" id="lastName" name="lastName"
                                 placeholder="Enter You Last Name Here" th:field="*{lastName}" type="text" />
+                            <!-- Display Validation Error Message -->
+                            <p
+                                    th:errors="*{lastName}"
+                                    class="text-danger"
+                                    th:if="${#fields.hasErrors('lastName')}"
+                            ></p>
                         </div>
                         <div class="form-group mb-3">
                             <label class="form-label">Email</label>
                             <input class="form-control" id="email" name="email" placeholder="Enter You Email Here"
                                 th:field="*{email}" type="email" />
+                            <!-- Display Validation Error Message -->
+                            <p
+                                    th:errors="*{email}"
+                                    class="text-danger"
+                                    th:if="${#fields.hasErrors('email')}"
+                            ></p>
                         </div>
                         <div class="form-group mb-3">
                             <label class="form-label">Password</label>
                             <input class="form-control" id="password" name="password"
                                 placeholder="Enter You Password Here" th:field="*{password}" type="password" />
+                            <!-- Display Validation Error Message -->
+                            <p
+                                    th:errors="*{password}"
+                                    class="text-danger"
+                                    th:if="${#fields.hasErrors('password')}"
+                            ></p>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Register</button>
