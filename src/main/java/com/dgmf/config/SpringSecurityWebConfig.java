@@ -22,8 +22,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class SpringSecurityWebConfig {
     private final UserDetailsService userDetailsService;
 
+    // "static PasswordEncoder" to Avoid Circular Reference
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public static PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
